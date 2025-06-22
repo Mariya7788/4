@@ -1,22 +1,93 @@
 .App {
-  align-items: center;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 42px;
-  flex-flow: column; */
-
+    align-items: center;
 }
-/* .bg{
-  background-image: url(../src/component/Dashboard/image/jeni1.jpg);
-  background-color: rgb(0, 0, 0,0.9);
-  position: relative;
-  height: 745px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-/* .bg-reg-log{
-  background-image: url(../src/component/Dashboard/image/bg11.jpg);
-  height: 800px;
-} */
+
+/* Общие мобильные стили */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Адаптивные изображения */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Адаптивные контейнеры */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Мобильные утилиты */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Скрытие горизонтальной прокрутки */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Адаптивные кнопки */
+button {
+    min-height: 44px; /* Минимальная высота для удобного нажатия на мобильных */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    button {
+        min-height: 48px;
+        font-size: 16px;
+    }
+}

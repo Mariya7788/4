@@ -63,3 +63,84 @@ input:focus{
     margin-top: -61px;
     padding-top: 132px;
 }
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .register-main, .login-main {
+        width: 350px;
+        padding: 30px;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 24px;
+    }
+
+    .register-main p, .login-main p {
+        font-size: 16px;
+    }
+
+    .register-main input, .login-main input {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .register-main button, .login-main button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .login-body, .register-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-main, .login-main {
+        width: 300px;
+        padding: 25px;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 22px;
+    }
+
+    .register-main p, .login-main p {
+        font-size: 14px;
+    }
+
+    .register-main input, .login-main input {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .register-main button, .login-main button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .login-body, .register-body {
+        padding: 15px;
+    }
+
+    .errP {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .register-main, .login-main {
+        width: 280px;
+        padding: 20px;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 20px;
+    }
+}

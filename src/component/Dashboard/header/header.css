@@ -157,3 +157,112 @@ padding-top: 30px; */
 .dotStyle:hover {
   color: #070707;
 }
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        margin: 0;
+        width: 80px;
+        height: 48px;
+    }
+
+    .search-input {
+        width: 250px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .search-input+button {
+        width: 80px;
+        height: 41px;
+        margin-right: 0;
+    }
+
+    .cart-button {
+        height: 45px;
+        width: 70px;
+        margin: 0 5px;
+    }
+
+    .cart-button p {
+        font-size: 12px;
+        margin-top: 8px !important;
+    }
+
+    .bg {
+        height: 400px;
+        margin-top: -20px;
+    }
+
+    .main-slice {
+        height: 400px;
+        padding: 50px 10px;
+    }
+
+    .leftArrowStyles, .rightArrowStyles {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .leftArrowStyles {
+        left: 10px;
+    }
+
+    .rightArrowStyles {
+        right: 10px;
+    }
+
+    .dotStyle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 42px;
+    }
+
+    .search-input {
+        width: 200px;
+        height: 36px;
+    }
+
+    .search-input+button {
+        width: 70px;
+        height: 37px;
+        font-size: 12px;
+    }
+
+    .cart-button {
+        height: 40px;
+        width: 60px;
+    }
+
+    .cart-button p {
+        font-size: 10px;
+        margin-top: 6px !important;
+    }
+
+    .bg {
+        height: 300px;
+    }
+
+    .main-slice {
+        height: 300px;
+        padding: 30px 5px;
+    }
+}
