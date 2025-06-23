@@ -3,7 +3,7 @@
 }
 
 /* Общие мобильные стили */
-* {
+• {
     box-sizing: border-box;
 }
 
@@ -11,13 +11,13 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+    /* overflow-x: hidden;  УДАЛЕНО */
     width: 100%;
     max-width: 100vw;
 }
 
 #root {
-    overflow-x: hidden;
+    /* overflow-x: hidden; УДАЛЕНО */
     width: 100%;
     max-width: 100vw;
 }
@@ -43,19 +43,19 @@ img {
     .container {
         padding: 0 10px;
     }
-    
+
     h1 {
         font-size: 24px;
     }
-    
+
     h2 {
         font-size: 20px;
     }
-    
+
     h3 {
         font-size: 18px;
     }
-    
+
     p {
         font-size: 14px;
         line-height: 1.5;
@@ -66,19 +66,19 @@ img {
     .container {
         padding: 0 8px;
     }
-    
+
     h1 {
         font-size: 22px;
     }
-    
+
     h2 {
         font-size: 18px;
     }
-    
+
     h3 {
         font-size: 16px;
     }
-    
+
     p {
         font-size: 13px;
     }
@@ -99,23 +99,25 @@ button {
 }
 
 /* Предотвращение переполнения для всех элементов */
-* {
+• {
     max-width: 100%;
 }
 
 /* Специальные стили для предотвращения горизонтальной прокрутки */
 .home {
-    overflow-x: hidden;
+    /* overflow-x: hidden; УДАЛЕНО */
     width: 100%;
 }
 
 .categories {
-    overflow-x: hidden;
+    /* overflow-x: hidden; УДАЛЕНО */
     width: 100%;
 }
 
 /* Исправление для слайдеров */
-.card-image, .itali-card-image, .korean-card-image {
+.card-image,
+.itali-card-image,
+.korean-card-image {
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
