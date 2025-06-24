@@ -62,11 +62,31 @@
     padding: 0 10px;
 }
 
-/* Скрываем скроллбар в WebKit браузерах */
+/* Стили скроллбара для WebKit браузеров */
 .card-image::-webkit-scrollbar,
 .itali-card-image::-webkit-scrollbar,
 .korean-card-image::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+}
+
+.card-image::-webkit-scrollbar-track,
+.itali-card-image::-webkit-scrollbar-track,
+.korean-card-image::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.card-image::-webkit-scrollbar-thumb,
+.itali-card-image::-webkit-scrollbar-thumb,
+.korean-card-image::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.card-image::-webkit-scrollbar-thumb:hover,
+.itali-card-image::-webkit-scrollbar-thumb:hover,
+.korean-card-image::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .All-dish-card{
@@ -95,7 +115,7 @@
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    margin: 20px;
+    margin: 0; /* Убираем margin, используем gap */
     flex-shrink: 0; /* Предотвращаем сжатие карточек */
     box-sizing: border-box;
 }
@@ -133,6 +153,7 @@
     font-size: 25px;
     right: 0px;
     z-index: 10;
+    cursor: pointer;
 }
 
 .leftImageArrowStyles{
@@ -149,6 +170,7 @@
     border: 0px;
     left: 0px;
     z-index: 10;
+    cursor: pointer;
 }
 
 .leftImageArrowStyles:hover{
@@ -198,6 +220,7 @@
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .sfp-main{
@@ -209,6 +232,7 @@
     margin: 40px auto;
     border-radius: 10px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .sfp-first img{
@@ -221,19 +245,29 @@
 
 .spf-second{
     padding-left: 20px;
+    flex: 1;
+    overflow: hidden;
 }
 
 .spf-second h3{
     color: darkgray;
+     font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .spf-second span{
     color: darkgreen;
     font-size: 17px;
+    font-weight: bold;
 }
 
 .spf-second p{
-    line-height: 30px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+    word-wrap: break-word;
 }
 
 .spf-second button{
@@ -242,6 +276,9 @@
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .spf-second button:hover{
@@ -311,13 +348,14 @@
     .card-image, .itali-card-image, .korean-card-image {
         padding: 0 5px;
         margin: 5px 0;
+        gap: 8px;
     }
 
     .Perslide {
         min-width: 200px;
         height: 280px;
         padding: 15px;
-        margin: 10px 5px;
+
     }
 
     .Perslide img {
@@ -348,17 +386,47 @@
         flex-direction: column;
         padding: 30px 20px;
         margin: 20px 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .sfp-first {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .sfp-first img {
         width: 100%;
         max-width: 400px;
         height: auto;
+         max-height: 350px;
     }
 
     .spf-second {
         padding-left: 0;
-        padding-top: 20px;
+        padding-top: 0;
+    }
+    .spf-second h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .spf-second h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .spf-second p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .spf-second button {
+        width: 100%;
+        max-width: 200px;
+        margin: 5px 0;
+        padding: 12px 15px;
+        font-size: 16px;
     }
 
     .All-dish-card {
@@ -408,13 +476,14 @@
     .card-image, .itali-card-image, .korean-card-image {
         padding: 0;
         margin: 0;
+        gap: 5px;
     }
 
     .Perslide {
         min-width: 160px;
         height: 240px;
         padding: 10px;
-        margin: 8px 3px;
+       
     }
 
     .Perslide img {
@@ -440,15 +509,25 @@
         padding: 20px 15px;
         margin: 15px 5px;
     }
+    .sfp-first img {
+        max-width: 280px;
+        max-height: 280px;
+    }
 
     .spf-second h1 {
         font-size: 24px;
+    }
+    .spf-second h3 {
+        font-size: 14px;
+    }
+    .spf-second p {
+        font-size: 13px;
     }
 
     .spf-second button {
         padding: 8px 12px;
         font-size: 14px;
-        margin: 5px 0;
+       
     }
 
     .leftImageArrowStyles, .rightImageArrowStyles {
@@ -489,7 +568,7 @@
         min-width: 140px;
         height: 200px;
         padding: 8px;
-        margin: 5px 2px;
+        
     }
 
     .Perslide img {
@@ -509,6 +588,14 @@
     .sfp-main {
         padding: 15px 10px;
         margin: 10px 2px;
+    }
+    .sfp-first img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .spf-second h1 {
+        font-size: 18px;
     }
 
     .imsa {
